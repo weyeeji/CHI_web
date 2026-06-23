@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh" data-lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280, initial-scale=1" />
+    <title>HMAT Role-Enactment Study System</title>
+    <meta
+      name="description"
+      content="A bilingual system-focused introduction to the controlled Human-Multi-Agent Team study probe."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b1117'/%3E%3Crect x='7' y='7' width='18' height='18' fill='none' stroke='%2367c5b9' stroke-width='5'/%3E%3Cpath d='M25 7v18' stroke='%23d18b69' stroke-width='5'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark"></span>
+        <span>HMAT System Probe</span>
+      </a>
+      <nav aria-label="Page sections">
+        <a href="#context"><span class="zh">背景</span><span class="en">Context</span></a>
+        <a href="#blueprint"><span class="zh">系统蓝图</span><span class="en">Blueprint</span></a>
+        <a href="#interface"><span class="zh">界面</span><span class="en">Interface</span></a>
+        <a href="#protocol"><span class="zh">流程</span><span class="en">Protocol</span></a>
+        <a href="#data"><span class="zh">数据</span><span class="en">Data</span></a>
+        <a href="#evidence"><span class="zh">证据</span><span class="en">Evidence</span></a>
+      </nav>
+      <button class="lang-toggle" type="button" aria-label="Switch language">
+        <span class="zh">EN</span><span class="en">中文</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="masthead">
+        <div class="masthead-inner">
+          <div class="masthead-copy">
+            <p class="overline">
+              <span class="zh">受控 Human-Multi-Agent Team 技术探针</span>
+              <span class="en">Controlled Human-Multi-Agent Team Technology Probe</span>
+            </p>
+            <h1>HMAT Role-Enactment Study System</h1>
+            <p class="lead">
+              <span class="zh">
+                一个为论文实验搭建的研究系统：它把 agent team 的角色、personality / SOUL layer、实验流程、日志和分析证据串成一条可控链路。
+              </span>
+              <span class="en">
+                A research system built for the paper experiment: it turns agent-team roles, personality / SOUL layers, protocol flow, logging, and analysis evidence into a controlled pipeline.
+              </span>
+            </p>
+            <div class="run-facts" aria-label="System facts">
+              <span>Explorer</span>
+              <span>Critic</span>
+              <span>Coordinator</span>
+              <span>2 Conditions</span>
+              <span>2 Task Rounds</span>
+              <span>Prompt Freeze</span>
+              <span>Blind Recognition</span>
+              <span>Integrity Audit</span>
+            </div>
+          </div>
+          <figure class="hero-browser">
+            <div class="browser-chrome">
+              <span></span><span></span><span></span>
+              <strong>controlled study workspace</strong>
+            </div>
+            <img src="./assets/system_screenshot.jpg" alt="HMAT controlled study workspace screenshot" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section context-section" id="context">
+        <div class="section-title">
+          <span>01</span>
+          <h2>
+            <span class="zh">为什么需要这个实验系统？</span>
+            <span class="en">Why does this experiment system exist?</span>
+          </h2>
+        </div>
+        <div class="context-grid">
+          <div class="context-story">
+            <p>
+              <span class="zh">
+                LLM-based agents 正在从一对一助手转向多个 agents 组成的团队。用户面对的不再只是单个 assistant 的输出质量，而是一个 agent team 是否分工清楚、能否产生有用分歧、是否能把探索与批判综合成可用方案。
+              </span>
+              <span class="en">
+                LLM-based agents are shifting from one-to-one assistants toward teams of visible agents. Users no longer evaluate only a single assistant's answer quality; they also judge whether an agent team has clear division of labor, useful disagreement, and effective synthesis.
+              </span>
+            </p>
+            <p>
+              <span class="zh">
+                OpenClaw 等系统中的 <code>SOUL.md</code> 说明 personality 已经可以被写成稳定配置：voice、stance、style、boundaries 和默认行为倾向都可以被设计。但现有研究更多关注 single agent personality，缺少对 agent team 中 personality 如何影响协作体验的研究。
+              </span>
+              <span class="en">
+                Systems such as OpenClaw make personality configurable through files like <code>SOUL.md</code>, where voice, stance, style, boundaries, and default behavioral tendencies can be authored. Existing research still focuses more on single-agent personality than on how personality operates inside an agent team.
+              </span>
+            </p>
+          </div>
+          <div class="gap-ledger">
+            <div>
+              <strong>1:1 assistant</strong>
+              <span>
+                <span class="zh">单个模型的稳定表现、语气、可信度。</span>
+                <span class="en">Stable behavior, tone, and trust for one assistant.</span>
+              </span>
+            </div>
+            <div>
+              <strong>Agent team</strong>
+              <span>
+                <span class="zh">多个角色之间的互补、分歧、综合和协调负担。</span>
+                <span class="en">Complementarity, disagreement, synthesis, and coordination cost across roles.</span>
+              </span>
+            </div>
+            <div>
+              <strong>Research gap</strong>
+              <span>
+                <span class="zh">SOUL/personality 是否成为团队层面可感知、可评价、可设计的变量。</span>
+                <span class="en">Whether SOUL/personality becomes a perceivable, evaluable, designable team-level variable.</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section blueprint-section" id="blueprint">
+        <div class="section-title">
+          <span>02</span>
+          <h2>
+            <span class="zh">系统蓝图：一个可点击的实验管线。</span>
+            <span class="en">System blueprint: a clickable experiment pipeline.</span>
+          </h2>
+        </div>
+        <p class="section-intro">
+          <span class="zh">
+            点击任意模块查看它在实验系统中的作用。这个结构让研究者既能运行真实协作，又能控制条件差异和保留审计证据。
+          </span>
+          <span class="en">
+            Click any module to see its role in the experiment system. The architecture supports live collaboration while preserving condition control and audit evidence.
+          </span>
+        </p>
+        <div class="blueprint-grid">
+          <div class="module-map" aria-label="Interactive system modules">
+            <button class="module active" type="button" data-module="participant">
+              <span>01</span>
+              <strong>Participant UI</strong>
+            </button>
+            <button class="module" type="button" data-module="orchestrator">
+              <span>02</span>
+              <strong>Round Orchestrator</strong>
+            </button>
+            <button class="module" type="button" data-module="prompt">
+              <span>03</span>
+              <strong>Prompt Stack</strong>
+            </button>
+            <button class="module" type="button" data-module="runtime">
+              <span>04</span>
+              <strong>Agent Runtime</strong>
+            </button>
+            <button class="module" type="button" data-module="instruments">
+              <span>05</span>
+              <strong>Instruments</strong>
+            </button>
+            <button class="module" type="button" data-module="database">
+              <span>06</span>
+              <strong>Study Database</strong>
+            </button>
+            <button class="module" type="button" data-module="admin">
+              <span>07</span>
+              <strong>Admin Console</strong>
+            </button>
+            <button class="module" type="button" data-module="analysis">
+              <span>08</span>
+              <strong>Analysis Export</strong>
+            </button>
+          </div>
+          <aside class="module-detail" aria-live="polite">
+            <p class="detail-kicker">Selected module</p>
+            <h3 id="moduleTitle"></h3>
+            <p id="moduleBody"></p>
+            <ul id="moduleBullets"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section interface-section" id="interface">
+        <div class="section-title">
+          <span>03</span>
+          <h2>
+            <span class="zh">参与者界面：把 agent team 作为协作对象呈现。</span>
+            <span class="en">Participant interface: presenting the agent team as the collaboration object.</span>
+          </h2>
+        </div>
+        <div class="interface-grid">
+          <figure class="large-shot">
+            <img src="./assets/system_screenshot.jpg" alt="HMAT participant workspace" />
+          </figure>
+          <div class="interface-notes">
+            <div>
+              <strong>Left task rail</strong>
+              <p>
+                <span class="zh">任务目标、目标用户和最终方案交付要求保持可见，避免用户忘记设计约束。</span>
+                <span class="en">Task goals, target users, and final deliverables remain visible so participants can keep constraints in view.</span>
+              </p>
+            </div>
+            <div>
+              <strong>Team transcript</strong>
+              <p>
+                <span class="zh">Explorer、Critic、Coordinator 的发言和参与者消息在同一 transcript 中形成团队过程。</span>
+                <span class="en">Explorer, Critic, Coordinator, and participant messages form a shared team process in one transcript.</span>
+              </p>
+            </div>
+            <div>
+              <strong>Hidden condition</strong>
+              <p>
+                <span class="zh">界面显示角色名，不显示 role-only / personality condition，降低 demand characteristics。</span>
+                <span class="en">The interface shows role names but not role-only / personality condition labels, reducing demand characteristics.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section protocol-section" id="protocol">
+        <div class="section-title">
+          <span>04</span>
+          <h2>
+            <span class="zh">实验流程：固定阶段，但保留真实人类输入。</span>
+            <span class="en">Protocol flow: fixed phases with live human input.</span>
+          </h2>
+        </div>
+        <div class="phase-line">
+          <div><span>Consent</span><p><span class="zh">语言选择与材料快照。</span><span class="en">Language selection and material snapshot.</span></p></div>
+          <div><span>Background</span><p><span class="zh">资格、AI 经验、信任倾向。</span><span class="en">Eligibility, AI experience, trust tendency.</span></p></div>
+          <div><span>Initial</span><p><span class="zh">三个 agent 初始贡献。</span><span class="en">Initial contributions from three agents.</span></p></div>
+          <div><span>Discussion</span><p><span class="zh">agent-agent 讨论与回应。</span><span class="en">Agent-agent discussion and response.</span></p></div>
+          <div><span>Human turns</span><p><span class="zh">最多 5 条参与者消息。</span><span class="en">Up to five participant messages.</span></p></div>
+          <div><span>Final</span><p><span class="zh">Coordinator 最终方案与补充。</span><span class="en">Coordinator final proposal and addenda.</span></p></div>
+          <div><span>Post-study</span><p><span class="zh">盲识别、比较、书面回答。</span><span class="en">Blind recognition, comparison, written prompts.</span></p></div>
+        </div>
+      </section>
+
+      <section class="content-section condition-section">
+        <div class="section-title">
+          <span>05</span>
+          <h2>
+            <span class="zh">条件操控：固定 role 与能力，只改变 SOUL layer。</span>
+            <span class="en">Condition manipulation: fixed roles and capabilities, changed SOUL layer.</span>
+          </h2>
+        </div>
+        <div class="condition-table">
+          <div class="thead">Agent</div>
+          <div class="thead">Role-only HMAT</div>
+          <div class="thead">Personality-enacted HMAT</div>
+          <div class="role-name">Explorer</div>
+          <div><span class="zh">中性、coverage-oriented，提供合理方向，避免签名式价值偏好。</span><span class="en">Neutral and coverage-oriented; offers plausible directions without a signature value preference.</span></div>
+          <div><span class="zh">possibility-first，寻找非显然但可落地的方向，把约束重构为设计机会。</span><span class="en">Possibility-first; seeks non-obvious but feasible directions and reframes constraints as design opportunities.</span></div>
+          <div class="role-name">Critic</div>
+          <div><span class="zh">中性、issue-listing，指出风险但不持续强势挑战队友。</span><span class="en">Neutral issue-listing; identifies risks without a standing pattern of forceful challenge.</span></div>
+          <div><span class="zh">evidence-seeking，挑战薄弱假设，区分严重性并提供 repair path。</span><span class="en">Evidence-seeking; challenges weak assumptions, marks severity, and provides repair paths.</span></div>
+          <div class="role-name">Coordinator</div>
+          <div><span class="zh">中性、summary-oriented，组织共享状态但避免强势主持。</span><span class="en">Neutral and summary-oriented; organizes the shared state without acting as a strong chair.</span></div>
+          <div><span class="zh">decision-oriented，连接 Explorer 与 Critic，把分歧转化为 decision trace。</span><span class="en">Decision-oriented; connects Explorer and Critic and turns disagreement into a decision trace.</span></div>
+        </div>
+        <div class="control-row">
+          <span>Same roles</span><span>Same tasks</span><span>Same model</span><span>Same phase order</span><span>Same budgets</span><span>Same final template</span>
+        </div>
+      </section>
+
+      <section class="content-section data-section" id="data">
+        <div class="section-title">
+          <span>06</span>
+          <h2>
+            <span class="zh">数据层：记录可复现的协作过程，而不只是结果。</span>
+            <span class="en">Data layer: logging the reproducible collaboration process, not just outcomes.</span>
+          </h2>
+        </div>
+        <div class="data-ledger">
+          <div><strong>Messages</strong><span><span class="zh">sender、role、phase、condition、turn index、tokens、latency、output-control metadata。</span><span class="en">sender, role, phase, condition, turn index, tokens, latency, output-control metadata.</span></span></div>
+          <div><strong>Agent runs</strong><span><span class="zh">完整 request / response、prompt stack、model、condition、phase、error state。</span><span class="en">Full request / response, prompt stack, model, condition, phase, and error state.</span></span></div>
+          <div><strong>Questionnaires</strong><span><span class="zh">post-task、blind recognition、pairwise comparison、written interview responses。</span><span class="en">Post-task, blind recognition, pairwise comparison, and written interview responses.</span></span></div>
+          <div><strong>Stimulus audit</strong><span><span class="zh">检查角色名、条件名、prompt 术语和任务词泄漏。</span><span class="en">Checks leakage of role names, condition names, prompt terms, and task-specific terms.</span></span></div>
+          <div><strong>Admin audit</strong><span><span class="zh">counterbalance、consent、debrief、analysis-ready gate、quality flags。</span><span class="en">Counterbalance, consent, debrief, analysis-ready gate, and quality flags.</span></span></div>
+        </div>
+      </section>
+
+      <section class="content-section admin-section">
+        <div class="section-title">
+          <span>07</span>
+          <h2>
+            <span class="zh">研究者后台：让实验能进入论文分析。</span>
+            <span class="en">Researcher console: making the experiment analysis-ready.</span>
+          </h2>
+        </div>
+        <div class="admin-grid">
+          <div><strong>Recruitment codes</strong><p><span class="zh">控制 main / pilot / dry-run 与 counterbalance group。</span><span class="en">Controls main / pilot / dry-run sessions and counterbalance groups.</span></p></div>
+          <div><strong>Prompt control</strong><p><span class="zh">编辑 prompts、记录 change notes、冻结 prompt snapshots。</span><span class="en">Edits prompts, records change notes, and freezes prompt snapshots.</span></p></div>
+          <div><strong>Integrity dashboard</strong><p><span class="zh">检查缺失流程、条件泄漏、质量 flags 和 analysis-ready 状态。</span><span class="en">Checks missing steps, condition leakage, quality flags, and analysis-ready state.</span></p></div>
+          <div><strong>Mixed-method export</strong><p><span class="zh">输出 construct means、within-subject differences、log cues 和 joint display。</span><span class="en">Exports construct means, within-subject differences, log cues, and joint displays.</span></p></div>
+        </div>
+      </section>
+
+      <section class="content-section instruments-section">
+        <div class="section-title">
+          <span>08</span>
+          <h2>
+            <span class="zh">测量界面：把主观体验、盲识别和开放回答连接起来。</span>
+            <span class="en">Measurement interface: linking subjective ratings, blind recognition, and written responses.</span>
+          </h2>
+        </div>
+        <div class="instrument-grid">
+          <figure>
+            <img src="./assets/post_task_questionnaire.jpg" alt="Post-task questionnaire screenshot" />
+            <figcaption><span class="zh">每轮 31 项任务后问卷。</span><span class="en">31 post-task questionnaire items per round.</span></figcaption>
+          </figure>
+          <figure>
+            <img src="./assets/post_study_questionnaire.jpg" alt="Post-study questionnaire screenshot" />
+            <figcaption><span class="zh">两轮结束后的盲识别、成对比较和书面访谈。</span><span class="en">Blind recognition, pairwise comparison, and written prompts after both rounds.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section evidence-section" id="evidence">
+        <div class="section-title">
+          <span>09</span>
+          <h2>
+            <span class="zh">系统输出：从条件操控到证据链。</span>
+            <span class="en">System output: from condition control to evidence chain.</span>
+          </h2>
+        </div>
+        <div class="evidence-grid">
+          <div class="chart-area">
+            <h3><span class="zh">主结果快照</span><span class="en">Main result snapshot</span></h3>
+            <p><span class="zh">Personality-enacted minus role-only，1-7 量表均值差；workload 为负表示负担更低。</span><span class="en">Personality-enacted minus role-only, mean differences on 1-7 scales; negative workload means lower demand.</span></p>
+            <div class="difference-chart" id="differenceChart" aria-label="Mean difference chart"></div>
+          </div>
+          <div class="rq-output">
+            <div><strong>RQ1</strong><p><span class="zh">三个 agents 均被评分为更稳定的 role enactment。</span><span class="en">All three agents were rated as having more stable role enactment.</span></p></div>
+            <div><strong>RQ2</strong><p><span class="zh">teamness、fluency、constructive disagreement 和 trust calibration 描述性提高。</span><span class="en">Teamness, fluency, constructive disagreement, and trust calibration increased descriptively.</span></p></div>
+            <div><strong>RQ3</strong><p><span class="zh">Critic 最显眼也最有张力；Coordinator 更像团队基础设施。</span><span class="en">The Critic was most salient and tense; the Coordinator acted more like team infrastructure.</span></p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="zh">这个网页介绍的是实验系统设计，而不是论文摘要页。</span>
+      <span class="en">This page introduces the experiment system design, not a paper-summary page.</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
