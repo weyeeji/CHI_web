@@ -54,21 +54,12 @@ code {
   font-size: 0.92em;
 }
 
-.en,
-html[data-lang="en"] .zh {
-  display: none;
-}
-
-html[data-lang="en"] .en {
-  display: inline;
-}
-
 .topbar {
   position: sticky;
   z-index: 20;
   top: 0;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   gap: 28px;
   align-items: center;
   min-height: 62px;
@@ -106,15 +97,69 @@ html[data-lang="en"] .en {
   color: var(--ink);
 }
 
-.lang-toggle {
-  min-width: 54px;
-  height: 36px;
-  border: 1px solid var(--line);
-  background: #fff;
+.student-module {
+  border-bottom: 1px solid var(--line);
+  background: #fbfcfd;
+}
+
+.student-module-inner {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 36px;
+  width: var(--max);
+  margin: 0 auto;
+  padding: 26px 0;
+}
+
+.student-intro {
+  padding-right: 24px;
+  border-right: 1px solid var(--line);
+}
+
+.module-label {
+  margin-bottom: 8px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.student-intro h2 {
+  max-width: 280px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.18;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin: 0;
+}
+
+.student-grid div {
+  min-width: 0;
+}
+
+.student-grid dt {
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.student-grid dd {
+  margin: 0;
   color: var(--ink);
-  cursor: pointer;
-  font: inherit;
-  font-weight: 780;
+  font-size: 15px;
+  font-weight: 740;
+  line-height: 1.35;
+}
+
+.student-grid a {
+  color: var(--teal);
 }
 
 .masthead {
